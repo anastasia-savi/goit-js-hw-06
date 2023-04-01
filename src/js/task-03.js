@@ -14,15 +14,8 @@ const images = [
 ];
 
 const findUl = document.querySelector(".gallery");
-console.log(findUl);
 
-// images
-//   .map((image) => {
-//     const newLi = document.createElement("li");
-//     findUl.append(newLi);
-//     const imgEl = `<img src= "${image.url}" alt= "${image.alt}">`;
-//     newLi.insertAdjacentHTML("beforeend", imgEl);
-//   })
-//   .join(" ");
-
-const markup = 
+const markup = images
+  .map((image) => `<li><img src= "${image.url}" alt= "${image.alt}"></li>`)
+  .join("");
+findUl.insertAdjacentHTML("beforeend", markup);
