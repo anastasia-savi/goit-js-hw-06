@@ -8,13 +8,20 @@ const ingredients = [
 ];
 
 const findIngr = document.querySelector("#ingredients");
-let arr = [];
-const ingredLi = ingredients.forEach((item) => {
+const arr = ingredients.map((item) => {
   const newLi = document.createElement("li");
   newLi.textContent = item;
-  arr.push(newLi);
+  return newLi;
 });
 findIngr.append(...arr);
+
+// let arr = [];
+// const ingredLi = ingredients.forEach((item) => {
+//   const newLi = document.createElement("li");
+//   newLi.textContent = item;
+//   arr.push(newLi);
+// });
+// findIngr.append(...arr);
 
 // findIngr.append(newLi);
 // const ingredLi = ingredients.reduce((acc, item) => {
