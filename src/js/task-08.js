@@ -11,7 +11,7 @@ const getInput = (event) => {
     password: password.value,
   };
   if (email.value === "" || password.value === "") {
-    alert("Please fill in all the fields!");
+    return alert("Please fill in all the fields!");
   }
   event.currentTarget.reset();
   console.log(objUser);

@@ -4,7 +4,8 @@ const inputBlur = (event) => {
   if (event.currentTarget.value.length >= attribute) {
     return textInput.classList.add("valid");
   } else {
-    return textInput.classList.add("invalid");
+    return textInput.classList.toggle("invalid");
   }
 };
 textInput.addEventListener("blur", inputBlur);
+console.dir(inputBlur);
